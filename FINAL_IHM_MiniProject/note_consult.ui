@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Note_Consult</class>
+ <widget class="QMainWindow" name="Note_Consult">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1130</width>
+    <height>770</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>UBMA Exam Application Correction and Consultation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+	background: transparent;
+}
+
+#container{
+	background: #FFFAFB;
+	border: 2px solid #1F1F1F;
+	border-radius: 30px;
+}
+
+#sideLine{
+	border: 2px dashed #424c78;
+	border-style: none none none dashed
+}
+#left{
+	background-color:qlineargradient(spread:pad, x1:0.49, y1:0, x2:0.505, y2:1, stop:0 rgba(0, 0, 74, 255), stop:0.230392 rgba(255, 255, 255, 255));
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-right: 1px solid #424c78;
+border-left: 2px solid #1F1F1F;
+border-top: 2px solid #1F1F1F;
+border-bottom: 2px solid #1F1F1F;
+}
+#left QLabel{
+	color: #1F1F1F;
+}
+#left #welcome{
+	color: #FFFAFB;
+}
+#left #infoContainer{
+	border: 2px dashed rgba(31, 31, 31,200);
+	border-radius: 10px;
+}
+
+#left #infoContiner QLabel{
+	color: rgba(31, 31, 31,200);
+}
+
+#Title {
+	color: #1F1F1F;
+}
+#noteFrame{
+	border: 03px dashed #1F1F1F;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius: 20px;
+}
+#right * {
+	color: #1F1F1F;
+}
+#consultationFrame{
+	border: 2px dashed #1F1F1F;
+	border-radius: 5px;
+}
+#consultTitle{
+	border: 2px dashed #1F1F1F;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="body">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="1">
+        <widget class="QFrame" name="container">
+         <property name="minimumSize">
+          <size>
+           <width>1080</width>
+           <height>720</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>1080</width>
+           <height>720</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QFrame" name="left">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>301</width>
+            <height>721</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="welcome">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>10</y>
+             <width>301</width>
+             <height>101</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>28</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Correction&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Consultation&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="infoContainer">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>520</y>
+             <width>281</width>
+             <height>151</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="map_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../FINAL_IHM_Assets/map-pin.svg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="adrs">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>10</y>
+              <width>231</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Address :&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; P.O Box.12, Annaba, 23000 Algeria.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="email">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>60</y>
+              <width>231</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Mail :&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; Contact@univ-annaba.dz&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="phone">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>110</y>
+              <width>231</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Phone :&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; +213 (0) 38 57 02 05&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="email_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../FINAL_IHM_Assets/mail.svg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="phone_icon">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>31</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap>../FINAL_IHM_Assets/phone.svg</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QLabel" name="LOGO">
+           <property name="geometry">
+            <rect>
+             <x>-10</x>
+             <y>240</y>
+             <width>311</width>
+             <height>181</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../FINAL_IHM_Assets/Logo@2x.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="email_2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>670</y>
+             <width>261</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Copyright©2023, Anis, Litissia and Aberrahmane. All rights reserved.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QFrame" name="right">
+          <property name="geometry">
+           <rect>
+            <x>300</x>
+            <y>0</y>
+            <width>781</width>
+            <height>721</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <widget class="QLabel" name="label_13">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>220</y>
+             <width>251</width>
+             <height>61</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>You can get the standard correction By clicking &quot;Download&quot;</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="corectionBtn">
+           <property name="geometry">
+            <rect>
+             <x>450</x>
+             <y>230</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border-radius:10px;
+	background-color:transparent;
+	border: 2px solid #1F1F1F;
+	color: #1F1F1F;
+	padding-bottom: 2px; /* space */
+}
+
+QPushButton:hover{
+	background-color: #1F1F1F; 
+	border: none;
+	color: #FFFAFB;
+}
+QPushButton::pressed{
+	background-color: #2B2C28; 
+	border: none;
+	color: #FFFAFB;
+}</string>
+           </property>
+           <property name="text">
+            <string>Download</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="finBtn">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>610</y>
+             <width>181</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	border-radius:10px;
+	background-color:transparent;
+	border: 2px solid #1F1F1F;
+	color: #1F1F1F;
+	padding-bottom: 2px; /* space */
+}
+
+QPushButton:hover{
+	background-color: #1F1F1F; 
+	border: none;
+	color: #FFFAFB;
+}
+QPushButton::pressed{
+	background-color: #2B2C28; 
+	border: none;
+	color: #FFFAFB;
+}</string>
+           </property>
+           <property name="text">
+            <string>Finish</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>51</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../FINAL_IHM_Assets/mp_iArtboard 5.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="label_2">
+           <property name="geometry">
+            <rect>
+             <x>90</x>
+             <y>-20</y>
+             <width>661</width>
+             <height>841</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap>../FINAL_IHM_Assets/mp_iiArtboard 3.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QLabel" name="Title">
+           <property name="geometry">
+            <rect>
+             <x>80</x>
+             <y>10</y>
+             <width>101</width>
+             <height>71</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>28</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Note&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="noteFrame">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>95</y>
+             <width>191</width>
+             <height>81</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="note">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>10</y>
+              <width>151</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu Medium</family>
+              <pointsize>36</pointsize>
+              <weight>50</weight>
+              <italic>false</italic>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;20/20&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QFrame" name="consultationFrame">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>310</y>
+             <width>341</width>
+             <height>281</height>
+            </rect>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>60</y>
+              <width>321</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Or you Can Consult a teacher if you have any problemes&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="comboBox">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>120</y>
+              <width>271</width>
+              <height>38</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+  margin-top: 20vh;
+  min-width: 12em;
+  min-height: 2em;
+  max-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  color: #444;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  selection-background-color: #def;
+	padding: 5px 15px;
+}
+
+QComboBox::drop-down {
+  width: 20px;
+  border-left: 1px solid #444;
+  subcontrol-origin: padding;
+  subcontrol-position: center right;
+  height: 100%;
+}
+
+QComboBox::down-arrow {
+  width: 0;
+  height: 0;
+  border: 0.3em solid #444;
+  border-color: #444 transparent transparent transparent;
+}
+
+QComboBox:hover, QComboBox:open {
+  border-radius: 10px;
+}
+
+QComboBox:open {
+  border: 1px solid #000;
+  background: #fff;
+  max-height: 15em;
+}
+
+QComboBox QAbstractItemView {
+  background-color: #fff;
+  color: #444;
+  border: none;
+}
+
+QComboBox QAbstractItemView::item {
+  padding: 12px;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+QComboBox QAbstractItemView::item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+QComboBox QAbstractItemView::item:selected {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+QComboBox:open::down-arrow {
+  top: 0.55em;
+}
+</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>16</width>
+              <height>16</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Teacher</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Debbah Amina</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kahya Souad</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="comboBox_2">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>170</y>
+              <width>271</width>
+              <height>38</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+  margin-top: 20vh;
+  min-width: 12em;
+  min-height: 2em;
+  max-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  color: #444;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  selection-background-color: #def;
+padding: 5px 15px;
+}
+
+QComboBox::drop-down {
+  width: 20px;
+  border-left: 1px solid #444;
+  subcontrol-origin: padding;
+  subcontrol-position: center right;
+  height: 100%;
+}
+
+QComboBox::down-arrow {
+  width: 0;
+  height: 0;
+  border: 0.3em solid #444;
+  border-color: #444 transparent transparent transparent;
+}
+
+QComboBox:hover, QComboBox:open {
+  border-radius: 10px;
+}
+
+QComboBox:open {
+  border: 1px solid #000;
+  background: #fff;
+  max-height: 15em;
+}
+
+QComboBox QAbstractItemView {
+  background-color: #fff;
+  color: #444;
+  border: none;
+}
+
+QComboBox QAbstractItemView::item {
+  padding: 12px;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+QComboBox QAbstractItemView::item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+QComboBox QAbstractItemView::item:selected {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+QComboBox:open::down-arrow {
+  top: 0.55em;
+}
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Available Dates</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>2024/01/27 14:30</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QPushButton" name="sendConsultBtn">
+            <property name="geometry">
+             <rect>
+              <x>100</x>
+              <y>230</y>
+              <width>131</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	border-radius:10px;
+	background-color:transparent;
+	border: 2px solid #1F1F1F;
+	color: #1F1F1F;
+	padding-bottom: 2px; /* space */
+}
+
+QPushButton:hover{
+	background-color: #1F1F1F; 
+	border: none;
+	color: #FFFAFB;
+}
+QPushButton::pressed{
+	background-color: #2B2C28; 
+	border: none;
+	color: #FFFAFB;
+}</string>
+            </property>
+            <property name="text">
+             <string>Send</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="consultTitle">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>111</width>
+              <height>51</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Ubuntu</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Consultation</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QToolButton" name="closeBtn">
+           <property name="geometry">
+            <rect>
+             <x>740</x>
+             <y>10</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: #FFFAFB;
+border: none;
+border-radius: 15px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../FINAL_IHM_Assets/x.svg</normaloff>../FINAL_IHM_Assets/x.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>31</width>
+             <height>31</height>
+            </size>
+           </property>
+          </widget>
+          <widget class="QToolButton" name="helpBtn">
+           <property name="geometry">
+            <rect>
+             <x>740</x>
+             <y>40</y>
+             <width>31</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;
+border: none;
+border-radius: 15px;</string>
+           </property>
+           <property name="text">
+            <string>Help</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../FINAL_IHM_Assets/help-circle.svg</normaloff>../FINAL_IHM_Assets/help-circle.svg</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+          </widget>
+          <zorder>label_2</zorder>
+          <zorder>label_13</zorder>
+          <zorder>corectionBtn</zorder>
+          <zorder>finBtn</zorder>
+          <zorder>label</zorder>
+          <zorder>Title</zorder>
+          <zorder>noteFrame</zorder>
+          <zorder>consultationFrame</zorder>
+          <zorder>closeBtn</zorder>
+          <zorder>helpBtn</zorder>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

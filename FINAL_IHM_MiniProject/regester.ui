@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Regester</class>
+ <widget class="QMainWindow" name="Regester">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>772</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+	background: transparent;
+}
+
+#container{
+	background: #FFFAFB;
+	border: 2px solid #1F1F1F;
+	border-radius: 30px;
+}
+
+#sideLine{
+	border: 2px dashed #424c78;
+	border-style: none none none dashed
+}
+#left{
+	background-color:qlineargradient(spread:pad, x1:0.49, y1:0, x2:0.505, y2:1, stop:0 rgba(0, 0, 74, 255), stop:0.230392 rgba(255, 255, 255, 255));
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+border-right: 1px solid #424c78;
+border-left: 2px solid #1F1F1F;
+border-top: 2px solid #1F1F1F;
+border-bottom: 2px solid #1F1F1F;
+}
+#left QLabel{
+	color: #1F1F1F;
+}
+#left #welcome{
+	color: #FFFAFB;
+}
+#left #infoContainer{
+	border: 2px dashed rgba(31, 31, 31,200);
+	border-radius: 10px;
+}
+
+#left #infoContiner QLabel{
+	color: rgba(31, 31, 31,200);
+}
+
+#right QLabel{
+	color: rgba(31, 31, 31,200);
+}
+#right #loginContainer{
+	border: 2px dashed rgba(31, 31, 31,200);
+	border-radius: 10px;
+}
+#right #loginContainer #loginTitle{
+	border: 2px dashed rgba(31, 31, 31,200);
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 5px;
+}
+
+#right #loginContainer QLineEdit {
+	background: transparent;
+	border:2px solid rgba(0,0,0,0);
+	border-bottom-color:rgba(31, 31, 31,200);
+	color: rgba(31, 31, 31,200);
+	padding-left: 35px;
+	padding-bottom: 5px;
+	/*brder-radius: 5px;*/
+}	
+
+#right #loginContainer #loginBtn {
+	border-radius:10px;
+	background-color:transparent;
+	border: 2px solid #1F1F1F;
+	color: #1F1F1F;
+	padding-bottom: 2px; /* space */
+}
+
+#right #loginContainer #loginBtn:hover{
+	background-color: #1F1F1F; 
+	border: none;
+	color: #FFFAFB;
+}
+#right #loginContainer #loginBtn::pressed{
+	background-color: #2B2C28; 
+	border: none;
+	color: #FFFAFB;
+}
+#right #loginContainer #rememberMe{
+	color:rgba(31, 31, 31,200);
+}
+
+#right #loginContainer #remarque{
+	background: transparent;
+	border: none;
+	border-radius: 15px;
+}
+
+#right #loginContainer #singupBtn{
+	text-align: right;
+	padding-right: 10px;
+}
+
+#right #loginContainer #eye_on, #right #loginContainer #eye_off{
+	background: #FFFAFB;
+	border: none;
+}
+
+
+#right #loginContainer #loginBtn_ {
+	border-radius:10px;
+	background-color:transparent;
+	border: 2px solid #1F1F1F;
+	color: #1F1F1F;
+	padding-bottom: 2px; /* space */
+}
+
+#right #loginContainer #loginBtn_:hover{
+	background-color: #1F1F1F; 
+	border: none;
+	color: #FFFAFB;
+}
+#right #loginContainer #loginBtn_::pressed{
+	background-color: #2B2C28; 
+	border: none;
+	color: #FFFAFB;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="alignFrame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="body">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="1">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="1">
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="1">
+           <widget class="QFrame" name="container">
+            <property name="minimumSize">
+             <size>
+              <width>1080</width>
+              <height>720</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>1080</width>
+              <height>720</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QFrame" name="left">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>301</width>
+               <height>721</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="welcome">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>20</y>
+                <width>301</width>
+                <height>71</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>28</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;REGISTER&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+             <widget class="QFrame" name="infoContainer">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>516</y>
+                <width>281</width>
+                <height>151</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QLabel" name="map_icon">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>10</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/map-pin.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLabel" name="adrs">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>10</y>
+                 <width>231</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Address :&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; P.O Box.12, Annaba, 23000 Algeria.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLabel" name="emailInfo">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>60</y>
+                 <width>231</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Mail :&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; Contact@univ-annaba.dz&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="phone">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>110</y>
+                 <width>231</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Phone :&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; +213 (0) 38 57 02 05&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="email_icon">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>60</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/mail.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLabel" name="phone_icon">
+               <property name="geometry">
+                <rect>
+                 <x>10</x>
+                 <y>110</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/phone.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QLabel" name="LOGO">
+              <property name="geometry">
+               <rect>
+                <x>-10</x>
+                <y>220</y>
+                <width>311</width>
+                <height>181</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>../FINAL_IHM_Assets/Logo@2x.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="email_2">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>666</y>
+                <width>261</width>
+                <height>51</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;justify&quot;&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Copyright©2023, Anis, Litissia and Abderrahmane. All rights reserved.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </widget>
+            <widget class="QFrame" name="right">
+             <property name="geometry">
+              <rect>
+               <x>300</x>
+               <y>0</y>
+               <width>781</width>
+               <height>721</height>
+              </rect>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLabel" name="welcomeTitle">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>20</y>
+                <width>741</width>
+                <height>81</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Welcome to UBMA exams system where you can pass your online exams&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QLabel" name="welcomeParagraphe">
+              <property name="geometry">
+               <rect>
+                <x>60</x>
+                <y>90</y>
+                <width>681</width>
+                <height>91</height>
+               </rect>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+               </font>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;The officiel application of UBMA where you can pass your online exams and check your point immediatly with autocorrection and teachers consulte gestion included .&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QFrame" name="loginContainer">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>190</y>
+                <width>741</width>
+                <height>501</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <widget class="QLineEdit" name="matricule">
+               <property name="geometry">
+                <rect>
+                 <x>410</x>
+                 <y>260</y>
+                 <width>301</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="maxLength">
+                <number>12</number>
+               </property>
+               <property name="placeholderText">
+                <string>Registration number</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="password">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>260</y>
+                 <width>301</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="maxLength">
+                <number>27</number>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::Password</enum>
+               </property>
+               <property name="placeholderText">
+                <string>Password</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="loginBtn">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>410</y>
+                 <width>281</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Sign Up</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="uHaveAccount">
+               <property name="geometry">
+                <rect>
+                 <x>260</x>
+                 <y>460</y>
+                 <width>161</width>
+                 <height>20</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>You have an account</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="singupBtn">
+               <property name="geometry">
+                <rect>
+                 <x>260</x>
+                 <y>449</y>
+                 <width>221</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+color:rgb(43, 198, 224);
+border:none;
+background-color:none;
+}
+
+
+QPushButton:hover { 
+color: rgb(31, 27, 236);
+}</string>
+               </property>
+               <property name="text">
+                <string>Sign In</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="loginTitle">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>161</width>
+                 <height>71</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>28</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Sign Up&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="map_icon_2">
+               <property name="geometry">
+                <rect>
+                 <x>410</x>
+                 <y>270</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/user.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLabel" name="map_icon_3">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>270</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/lock.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QTextEdit" name="remarque">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>360</y>
+                 <width>671</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+               <property name="html">
+                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+              <widget class="QToolButton" name="eye_on">
+               <property name="geometry">
+                <rect>
+                 <x>290</x>
+                 <y>270</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../FINAL_IHM_Assets/eye.svg</normaloff>../FINAL_IHM_Assets/eye.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>31</width>
+                 <height>31</height>
+                </size>
+               </property>
+              </widget>
+              <widget class="QToolButton" name="eye_off">
+               <property name="geometry">
+                <rect>
+                 <x>290</x>
+                 <y>270</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background: transparent;</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../FINAL_IHM_Assets/eye-off.svg</normaloff>../FINAL_IHM_Assets/eye-off.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>31</width>
+                 <height>31</height>
+                </size>
+               </property>
+              </widget>
+              <widget class="QLabel" name="map_icon_4">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>120</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/user.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="name">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>110</y>
+                 <width>301</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="maxLength">
+                <number>12</number>
+               </property>
+               <property name="placeholderText">
+                <string>Name</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="map_icon_5">
+               <property name="geometry">
+                <rect>
+                 <x>410</x>
+                 <y>120</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/user.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="surname">
+               <property name="geometry">
+                <rect>
+                 <x>410</x>
+                 <y>110</y>
+                 <width>301</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="maxLength">
+                <number>12</number>
+               </property>
+               <property name="placeholderText">
+                <string>Surname</string>
+               </property>
+              </widget>
+              <widget class="QLineEdit" name="email">
+               <property name="geometry">
+                <rect>
+                 <x>170</x>
+                 <y>190</y>
+                 <width>381</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="maxLength">
+                <number>27</number>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::Normal</enum>
+               </property>
+               <property name="placeholderText">
+                <string>Email</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="map_icon_6">
+               <property name="geometry">
+                <rect>
+                 <x>170</x>
+                 <y>200</y>
+                 <width>31</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="pixmap">
+                <pixmap>../FINAL_IHM_Assets/mail.svg</pixmap>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+              <widget class="QCheckBox" name="terms">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>330</y>
+                 <width>16</width>
+                 <height>16</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_2">
+               <property name="geometry">
+                <rect>
+                 <x>50</x>
+                 <y>325</y>
+                 <width>231</width>
+                 <height>21</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>12</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>I Accept All Terms&amp;Conditions .</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="loginBtn_">
+               <property name="geometry">
+                <rect>
+                 <x>400</x>
+                 <y>410</y>
+                 <width>281</width>
+                 <height>41</height>
+                </rect>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Ubuntu</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="cursor">
+                <cursorShape>PointingHandCursor</cursorShape>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Start Exam</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QLabel" name="label">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>0</y>
+                <width>720</width>
+                <height>720</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap>../FINAL_IHM_Assets/mp_iArtboard 4.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="closeBtn">
+              <property name="geometry">
+               <rect>
+                <x>740</x>
+                <y>10</y>
+                <width>31</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: transparent;
+border: none;
+border-radius: 15px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../FINAL_IHM_Assets/x.svg</normaloff>../FINAL_IHM_Assets/x.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>31</width>
+                <height>31</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="helpBtn">
+              <property name="geometry">
+               <rect>
+                <x>740</x>
+                <y>40</y>
+                <width>31</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: transparent;
+border: none;
+border-radius: 15px;</string>
+              </property>
+              <property name="text">
+               <string>Help</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../FINAL_IHM_Assets/help-circle.svg</normaloff>../FINAL_IHM_Assets/help-circle.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="helpBtn_2">
+              <property name="geometry">
+               <rect>
+                <x>690</x>
+                <y>690</y>
+                <width>31</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background: transparent;
+border: none;
+border-radius: 15px;</string>
+              </property>
+              <property name="text">
+               <string>Help</string>
+              </property>
+              <property name="icon">
+               <iconset>
+                <normaloff>../FINAL_IHM_Assets/help-circle.svg</normaloff>../FINAL_IHM_Assets/help-circle.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+             </widget>
+             <zorder>label</zorder>
+             <zorder>welcomeTitle</zorder>
+             <zorder>welcomeParagraphe</zorder>
+             <zorder>loginContainer</zorder>
+             <zorder>closeBtn</zorder>
+             <zorder>helpBtn</zorder>
+             <zorder>helpBtn_2</zorder>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
